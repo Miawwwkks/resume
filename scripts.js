@@ -9,6 +9,15 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
+
+    const butterflies = document.querySelectorAll('.butterfly');
+
+butterflies.forEach((butterfly) => {
+    const randomLeft = Math.random() * window.innerWidth;
+    const randomDuration = Math.random() * 5 + 5; // زمان حرکت بین 5 تا 10 ثانیه
+    butterfly.style.left = randomLeft + 'px';
+    butterfly.style.animationDuration = randomDuration + 's';
+});
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
     if (sideNav) {
